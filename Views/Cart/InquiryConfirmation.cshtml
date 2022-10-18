@@ -1,0 +1,14 @@
+﻿@model RockyProject.Models.OrderHeader
+<div class="text-center ">
+    @if(Model != null){
+        <h1 class="text-info"> Order Created</h1>
+        <p>Order @Model.Id has been created successfully</p>
+    }
+    else{
+    <h1 class= "text-info"> Inquiry Confirmation</h1>
+    <p> We have recieved your inquirt and someone from our team will contact you shortly</p>
+    }
+    <img src="/images/download.jpg" width="80px"/>
+
+</div>
+ 

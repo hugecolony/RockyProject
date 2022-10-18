@@ -1,0 +1,50 @@
+﻿@model RockyProject.Models.ViewModel.HomeVM
+<div class="container">
+    <div class="text-center">
+        <button class="btn btn-dark filter-button"data-filter="all" >ALL</button>
+        @*<h1> Categories</h1>
+       *@ @foreach (var obj in Model.Categories ){
+            <button class="btn btn-dark filter-button" data-filter="@obj.Name.Replace(' ','_')">
+                @obj.Name
+            </button>
+        }
+        <br />
+        <div class="row">
+            @foreach (var prod in Model.Products)
+            {
+                <partial name = "_IndiviualProductCard" model="prod"></partial>
+                @*<button class="btn btn-dark filter-button" data-filter="@obj.Name.Replace(' ','_')">
+                    @obj.Name
+                </button>
+                //display All products
+                //adding partial views in shared folders
+
+                    *@
+            }
+        </div>
+
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function(){
+            $(".filter-button").click(function(){
+                //get data-flliter toggle filter class in indiviualclass
+                var value = $(this).attr('data-filter');
+                if(value == "all"){
+                    $('.filter').show('1000');
+
+                }else{
+                    $('.filter').not('.'+value).hide('3000');
+                    $('.filter').filter('.'+value).show('3000');
+                }
+            });
+
+            
+        });
+
+
+
+    </script>
+}

@@ -1,0 +1,8 @@
+// steps
+
+1) Model -> Create Class
+2)Data -> ApplicationDbContext Dbset
+3)Add migrations to  add----ToDatabase // update-database
+4)Create Controller
+4.1) Create View folder Index and Create file
+5) Layoutcs.html

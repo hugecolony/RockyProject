@@ -1,0 +1,29 @@
+Validations
+
+ Model
+Category 
+
+[Range(1,int.maxValue,ErrorMessage = "")]
+
+asp-validation summary =  ALL, ModelONly
+
+class =  text-danger
+
+
+asp-validation-form
+
+
+Server Side 
+
+Category controller
+if (ModelState_isvalid(){
+
+}else{
+
+}
+
+@scripts 
+
+partial 
+
+validationscripts
